@@ -7,5 +7,6 @@ body {
 .thumbnails-list{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     
 }
