@@ -11,3 +11,7 @@ body {
     max-height: 20vh;
     overflow-y: auto;
 }
+.thumbnails-image{
+    width: 20vw;
+    height: 15vh;
+}
