@@ -1,14 +1,29 @@
+@font-face {
+    font-family: lakeshor;
+    src: url("fonts/lakeshor-webfonts.svg");
+    src: url("fonts/lakeshor-webfonts.woff");
+}
+@font-face {
+    font-family: airsteam;
+    src: url("fonts/Airsteam-webfonts.svg");
+    src: url("fonts/Airsteam-webfonts.woff");
+:root{
+    --thumbnails-image-width:20vw;
+    --thumbnails-image-height:18vw;
+    --thumbnails-title-height:calc(var(--thumbnails-image-height)*0.33);
+}
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     /* align-items: center; */
 }
+
 .thumbnails-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-height: 25vh;
+    max-height: 35vh;
     overflow-y: auto;
     justify-content: space-around;
     list-style: none;
@@ -16,8 +31,8 @@ body {
     padding-top: 2.5vh;
 }
 .thumbnails-image {
-    width: 20vw;
-    height: 18vw;
+    width: var(--thumbnails-image-width);
+    height: var(--thumbnails-image-height);
     display:block
 }
 .details-title {
@@ -28,7 +43,8 @@ body {
 }
 .details-image {
     width: 60vw;
-    height: 55vw
+    height: 55vw;
+    border-radius: 25%;
 }
 .details-container {
     position: relative;
@@ -42,11 +58,19 @@ body {
     background-color: beige;
     color: blue;
     font-size: 1.2rem;
+    width: var(--thumbnails-image-width);
+    height: var(--thumbnails-image-height);
 }
 .thumbnails-item {
     margin-top: 2vh;
     margin-left: 2vw;
     border: 1px solid blue;
+    max-width: var(--thumbnails-image-width);
+    min-height: 
+    calc(var(--thumbnails-image-height)+
+    var(--thumbnails-title-height));
+
+
 }
 .thumbnails-anchor {
     text-decoration: none;
@@ -57,11 +81,18 @@ body {
     font-size: 2rem;
     text-align: center;
    text-transform: uppercase;
+   margin: 0;
+   font-family: lakeshort;
 }
 body, html {
     height: 100%
 }
 @media (min-width: 568px){
+    :root{
+        --thumbnails-image-width:12vw;
+        --thumbnails-image-height:10vw;
+        --thumbnails-title-height:calc(var(--thumbnails-image-height)*0.33);
+    }
     .thumbnails-list {
         flex-direction: column;
         flex-wrap: nowrap;
@@ -72,9 +103,9 @@ body, html {
        
     }
     .thumbnails-title {
-        width: 12vw;
+        
         font-size: 1rem;
-        height: 3vw;
+     
     }
     .thumbnails-item {
         max-width: 12vw;
@@ -83,11 +114,7 @@ body, html {
         overflow:hidden;
         min-height: 13vw;
     }
-    .thumbnails-image {
-        width: 12vw;
-        height: 10vw;
-
-    }
+    
     .details-image {
         width: 60vw;
         height: 43vw;
