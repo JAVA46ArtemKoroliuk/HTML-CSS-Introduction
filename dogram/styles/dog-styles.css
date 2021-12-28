@@ -153,3 +153,48 @@ body, html {
         
     }
 }
+@media (min-width: 900px){
+    :root {
+        --thumbnails-image-width: 13vw;
+        --thumbnails-image-height: 10vw;
+        --thumbnails-title-height: calc(var(--thumbnails-image-height) * 0.25);
+    }
+    body{
+        background-color: coral;
+    }
+    
+    .main-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .details-image{
+        height: 40vw;
+        width: 50vw;
+        justify-content: center;
+    }
+    .thumbnails-list{
+        display: flex;
+        flex-direction: row;
+       align-items: center;
+       justify-content: space-between;
+       order: 0;
+       flex-wrap: wrap;
+    }
+    .thumbnails-item{
+        display: flex;
+        justify-content: space-between;
+    }
+    .details-title {
+        background-color: cornsilk;
+        position: absolute;
+        left: 43vw;
+        font-family: airstream;
+        font-style: italic;
+       
+    }
+    .footer-title{
+        background-color: rgb(255, 255, 255);
+      
+    }
+
+}
