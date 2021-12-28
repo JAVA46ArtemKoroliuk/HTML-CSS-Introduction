@@ -1,21 +1,24 @@
 @font-face {
     font-family: lakeshor;
-    src: url("fonts/lakeshor-webfonts.svg");
-    src: url("fonts/lakeshor-webfonts.woff");
+    src: url("fonts/LAKESHOR-webfont.svg");
+    src: url("fonts/LAKESHOR-webfont.woff");
 }
 @font-face {
-    font-family: airsteam;
-    src: url("fonts/Airsteam-webfonts.svg");
-    src: url("fonts/Airsteam-webfonts.woff");
-:root{
-    --thumbnails-image-width:20vw;
-    --thumbnails-image-height:18vw;
-    --thumbnails-title-height:calc(var(--thumbnails-image-height)*0.33);
+    font-family: airstream;
+    src: url("fonts/Airstream-webfont.svg");
+    src: url("fonts/Airstream-webfont.woff");
+}
+:root {
+    --thumbnails-image-width: 20vw;
+    --thumbnails-image-height: 18vw;
+    --thumbnails-title-height: calc(var(--thumbnails-image-height) * 0.33);
 }
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0;
+    background-color: darkseagreen;
     /* align-items: center; */
 }
 
@@ -39,11 +42,13 @@ body {
     background-color: cornsilk;
     position: absolute;
     left: 3vw;
-    bottom: 2vw
+    bottom: 2vw;
+    font-family: airstream;
+    font-style: italic;
 }
 .details-image {
-    width: 60vw;
-    height: 55vw;
+    width: 70vw;
+    height: 60vw;
     border-radius: 25%;
 }
 .details-container {
@@ -59,18 +64,16 @@ body {
     color: blue;
     font-size: 1.2rem;
     width: var(--thumbnails-image-width);
-    height: var(--thumbnails-image-height);
+    height: var(--thumbnails-title-height);
 }
 .thumbnails-item {
     margin-top: 2vh;
     margin-left: 2vw;
     border: 1px solid blue;
     max-width: var(--thumbnails-image-width);
-    min-height: 
-    calc(var(--thumbnails-image-height)+
-    var(--thumbnails-title-height));
-
-
+    min-height: calc(var(--thumbnails-image-height) + var(--thumbnails-title-height));
+    border-radius: 25%;
+    overflow: hidden
 }
 .thumbnails-anchor {
     text-decoration: none;
@@ -82,16 +85,16 @@ body {
     text-align: center;
    text-transform: uppercase;
    margin: 0;
-   font-family: lakeshort;
+   font-family: lakeshor;
 }
 body, html {
     height: 100%
 }
 @media (min-width: 568px){
-    :root{
-        --thumbnails-image-width:12vw;
-        --thumbnails-image-height:10vw;
-        --thumbnails-title-height:calc(var(--thumbnails-image-height)*0.33);
+    :root {
+        --thumbnails-image-width: 12vw;
+        --thumbnails-image-height: 10vw;
+        --thumbnails-title-height: calc(var(--thumbnails-image-height) * 0.25);
     }
     .thumbnails-list {
         flex-direction: column;
@@ -100,19 +103,24 @@ body, html {
         max-height: 70vh;
         justify-content: flex-start;
         padding: 0;
+        margin: 0;
        
     }
     .thumbnails-title {
         
         font-size: 1rem;
-     
+        
     }
     .thumbnails-item {
-        max-width: 12vw;
+      
         margin-left:0;
-        border-radius:25%;
+       
         overflow:hidden;
-        min-height: 13vw;
+       
+        margin-top:0;
+    }
+    .thumbnails-item+.thumbnails-item {
+        margin-top: 2vh;
     }
     
     .details-image {
