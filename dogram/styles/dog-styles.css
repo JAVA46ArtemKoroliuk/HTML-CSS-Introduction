@@ -160,29 +160,42 @@ body, html {
         --thumbnails-title-height: calc(var(--thumbnails-image-height) * 0.25);
     }
     body{
-        background-color: coral;
+        background-color: coral; 
+       overflow: hidden;
+        
+
+       
     }
     
     .main-content{
         display: flex;
         flex-direction: column;
     }
+    .details-container{
+    
+    }
     .details-image{
         height: 40vw;
         width: 50vw;
         justify-content: center;
+        
+        
     }
     .thumbnails-list{
         display: flex;
         flex-direction: row;
-       align-items: center;
+       align-items: flex-end;
        justify-content: space-between;
        order: 0;
-       flex-wrap: wrap;
+      flex-wrap: wrap;
+     
+      
+      
     }
     .thumbnails-item{
         display: flex;
         justify-content: space-between;
+        flex-wrap: nowrap;
     }
     .details-title {
         background-color: cornsilk;
