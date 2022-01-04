@@ -12,6 +12,9 @@
     --thumbnails-image-width: 20vw;
     --thumbnails-image-height: 18vw;
     --thumbnails-title-height: calc(var(--thumbnails-image-height) * 0.33);
+    --hidden-thumbnails-image-width: 40vw;
+    --hidden-thumbnails-image-height: 36vw;
+    --hidden-thumbnails-title-height: calc(var(--hidden-thumbnails-image-height)*0.33);
 }
 body {
     display: flex;
@@ -19,7 +22,7 @@ body {
     justify-content: space-between;
     margin: 0;
     background-color: darkseagreen;
-    /* align-items: center; */
+    /*align-items: center; */
 }
 
 .thumbnails-list {
@@ -33,10 +36,22 @@ body {
     padding: 0;
     padding-top: 2.5vh;
 }
+.hidden .thumbnails-list {
+    flex-direction: row;
+    max-height: 80vh;
+    flex-wrap:wrap;
+    align-items:center;
+    
+}
+
 .thumbnails-image {
     width: var(--thumbnails-image-width);
     height: var(--thumbnails-image-height);
     display:block
+}
+.hidden.thumbnails-image{
+   width: var(--hidden-thumbnails-image-width);
+   height: var(--hidden-thumbnails-image-height);
 }
 .details-title {
     background-color: cornsilk;
@@ -57,13 +72,13 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.hide-button{
-    position: absolute;
-    right: 13vw;
+.hide-button {
+    position:absolute;
+    right: 10vw;
     top: 2vw;
 }
-.hidden.details-container{
-    display: none;
+.hidden .details-container {
+    display: none
 }
 .thumbnails-title {
     display: block;
@@ -83,10 +98,9 @@ body {
     border-radius: 25%;
     overflow: hidden
 }
-.selected.thumbnails-item{
+.selected.thumbnails-item {
     border-radius: 0;
-    border: 3px solid green;
-
+    border: 3px solid green
 }
 .thumbnails-anchor {
     text-decoration: none;
@@ -117,8 +131,8 @@ body, html {
         justify-content: flex-start;
         padding: 0;
         margin: 0;
-       
     }
+   
     .thumbnails-title {
         
         font-size: 1rem;
@@ -140,6 +154,7 @@ body, html {
         width: 60vw;
         height: 43vw;
     }
+    
     .details-title {
         left: -4vw;
         bottom: 2vw

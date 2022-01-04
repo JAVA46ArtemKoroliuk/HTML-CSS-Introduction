@@ -1,38 +1,38 @@
 /*jshint esversion: 6 */
-console.log("hello World!!!");
-var detailsTitle=document.querySelector(".details-title");
-let detailImage=document.querySelector(".details-image");
-let mainContentE1=document.querySelector(main-content);
-let anchors = document.querySelectorAll(".thambnails-anchor"); //all HTML elements to the class thambnails-anchor
-let selectedItim;
-for(var i=0; i<anchors.length;i++) {
-    anchors[i].addEventListener("click", function(event){
-            event.preventDefault();
-            showDetails();
-            setDetails (anchors[i]);
+console.log("script launched");
+let detailsImage = document.querySelector(".details-image");
+let detailsTitle = document.querySelector(".details-title");
+let mainContentEl = document.querySelector(".main-content");
+
+let selectedItem;
+let anchors = 
+document.querySelectorAll(".thumbnails-anchor");//all HTML elements belonging to the clas thumbnails-anchor
+for(let i = 0; i < anchors.length; i++) {
+    anchors[i].addEventListener("click", function(event) {
+        event.preventDefault(); //canceling default behavior of anchor element hitting
+        showDetails();
+        setDetails(anchors[i]); //setDetails function call with passing reference to appropriate anchor
     })
-       
 }
-         function setDetails(anchor){ 
-            let hrefvalue=anchor.getAttribute("href");
-            detailImage.setAttribute("src",hrefvalue);
-            detailsTitle.textContent=anchor.getAttribute("data-details-title");
-           if(selectedItim){
-               selectedItim.classList.remove("selected");
-           }
-           selectedItim=anchor.parentElement;
-            let thumbnailsitem= `[href="${hrefvalue}"] .thambnails-title`;
-            let thambnailsTitle= document.querySelector(thumbnailsTitileSelector);
-            detailsTitle.textContent=`${thambnailsTitleE1.textContent}:${anchor.getAttribute('data-details-title')}`;
-            anchor.parentElement.classList.add(selected);
-
+function setDetails(anchor) {
+    console.log("anchor element  was pressed", anchor);
+    let hrefValue = anchor.getAttribute("href");
+    detailsImage.setAttribute("src", hrefValue );
+    anchor.parentElement.classList.add("selected");
+    if (selectedItem) {
+        selectedItem.classList.remove("selected")
+    }
+    selectedItem = anchor.parentElement;
+    //get element with class thumbnails-title inside the given anchor
+    let thumbnailsTitleSelector = `[href="${hrefValue}"] .thumbnails-title`;
+    let thumbnailsTitleEl = document.querySelector(thumbnailsTitleSelector);
+    //dog name exists inside thumbnailsTitleEl.textContent
+    detailsTitle.textContent = `${thumbnailsTitleEl.textContent}: ${anchor.getAttribute('data-details-title')}` ;
+   
 }
-
-function showDetails(){
-    mainContentE1.classList.remove('hidden');
-
-
+function showDetails() {
+    mainContentEl.classList.remove('hidden');
 }
-function hideDetails(){
-    mainContentE1.classList.add('hidden');
+function hideDetails() {
+    mainContentEl.classList.add('hidden');
 }

@@ -1,220 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="styles/dog-styles.css">
-   <link rel="shortcut icon" href="images/faiconDog2.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/dog-styles.css">
+    <link rel="shortcut icon" href="images/faiconDog2.png" type="image/x-icon">
     <title>Dogram</title>
 </head>
+
 <body>
     <header>
-        <h2 class="logo-title">
-            Dogram
-        </h2>
+        <h2 class="logo-title">D o g r a m</h2>
     </header>
     <main class="main-content hidden">
         <section class="details-container">
-            <img class="details-image" src="images/dog2.jpg" alt="dog1">
-            <span class="details-title">Dont expect from me much!</span>
-        <batton class="hide-button" onclick="hideDetails()"> hide details</batton>
+            <img class="details-image" src="images/dog1.jpg" alt="dog1 image">
+            <span class="details-title">The most touchy dog</span>
+            <button class="hide-button" onclick="hideDetails()">hide details</button>
         </section>
         <ul class="thumbnails-list">
             <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog1.jpg" data-details-title="12">
+                <a class="thumbnails-anchor" href="images/dog1.jpg"
+                 data-details-title="The most touchy dog">
                     <img class="thumbnails-image" src="images/dog1.jpg" alt="dog1 image">
-                    <span class="thumbnails-title">dog1</span>
+                    <span class="thumbnails-title">brown</span>
                 </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog2.jpg" data-details-title ="13">
-                    <img class="thumbnails-image" src="images/dog2.jpg" alt="dog2 image">
-                    <span class="thumbnails-title">dog2</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog3.jpg" data-details-title ="14">
-                    <img class="thumbnails-image" src="images/dog3.jpg" alt="dog3 image">
-                    <span class="thumbnails-title">dog3</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog4.jpg" data-details-title ="15">
-                    <img class="thumbnails-image" src="images/dog4.jpg" alt="dog4 image">
-                    <span class="thumbnails-title">dog4</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog5.jpg" data-details-title ="16">
-                    <img class="thumbnails-image" src="images/dog5.jpg" alt="dog5 image">
-                    <span class="thumbnails-title">dog5</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog1.jpg" data-details-title ="17">
-                    <img class="thumbnails-image" src="images/dog1.jpg" alt="dog1 image">
-                    <span class="thumbnails-title">dog1</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog2.jpg" data-details-title ="18">
-                    <img class="thumbnails-image" src="images/dog2.jpg" alt="dog2 image">
-                    <span class="thumbnails-title">dog2</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog3.jpg" data-details-title ="19">
-                    <img class="thumbnails-image" src="images/dog3.jpg" alt="dog3 image">
-                    <span class="thumbnails-title">dog3</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog4.jpg" data-details-title ="20">
-                    <img class="thumbnails-image" src="images/dog4.jpg" alt="dog4 image">
-                    <span class="thumbnails-title">dog4</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog5.jpg" data-details-title ="21">
-                    <img class="thumbnails-image" src="images/dog5.jpg" alt="dog5 image">
-                    <span class="thumbnails-title">dog5</span>
-                </a>
-            </li>
 
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog1.jpg" data-details-title ="22">
-                    <img class="thumbnails-image" src="images/dog1.jpg" alt="dog1 image">
-                    <span class="thumbnails-title">dog1</span>
-                </a>
             </li>
             <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog2.jpg" data-details-title ="23">
+                <a class="thumbnails-anchor" href="images/dog2.jpg" data-details-title="The smartest dog">
                     <img class="thumbnails-image" src="images/dog2.jpg" alt="dog2 image">
-                    <span class="thumbnails-title">dog2</span>
+                    <span class="thumbnails-title">Scientist</span>
                 </a>
+
             </li>
             <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog3.jpg" data-details-title ="24">
+                <a class="thumbnails-anchor" href="images/dog3.jpg" data-details-title="The laziest dog">
                     <img class="thumbnails-image" src="images/dog3.jpg" alt="dog3 image">
-                    <span class="thumbnails-title">dog3</span>
+                    <span class="thumbnails-title">Bummer</span>
                 </a>
+
             </li>
             <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog4.jpg" data-details-title ="25">
+                <a class="thumbnails-anchor" href="images/dog4.jpg" data-details-title="The most serious dog" >
                     <img class="thumbnails-image" src="images/dog4.jpg" alt="dog4 image">
-                    <span class="thumbnails-title">dog4</span>
+                    <span class="thumbnails-title">Speaker</span>
                 </a>
+
             </li>
             <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog5.jpg" data-details-title ="26">
+                <a class="thumbnails-anchor" href="images/dog5.jpg" data-details-title="The most beautiful dog">
                     <img class="thumbnails-image" src="images/dog5.jpg" alt="dog5 image">
-                    <span class="thumbnails-title">dog5</span>
+                    <span class="thumbnails-title">Dolly</span>
                 </a>
+
             </li>
             <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog1.jpg" data-details-title ="27">
+                <a class="thumbnails-anchor" href="images/dog1.jpg"
+                 data-details-title="The most touchy dog">
                     <img class="thumbnails-image" src="images/dog1.jpg" alt="dog1 image">
-                    <span class="thumbnails-title">dog1</span>
+                    <span class="thumbnails-title">brown</span>
                 </a>
+
             </li>
             <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog2.jpg" data-details-title ="28">
+                <a class="thumbnails-anchor" href="images/dog2.jpg" data-details-title="The smartest dog">
                     <img class="thumbnails-image" src="images/dog2.jpg" alt="dog2 image">
-                    <span class="thumbnails-title">dog2</span>
+                    <span class="thumbnails-title">Scientist</span>
                 </a>
+
             </li>
             <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog3.jpg" data-details-title ="29">
+                <a class="thumbnails-anchor" href="images/dog3.jpg" data-details-title="The laziest dog">
                     <img class="thumbnails-image" src="images/dog3.jpg" alt="dog3 image">
-                    <span class="thumbnails-title">dog3</span>
+                    <span class="thumbnails-title">Bummer</span>
                 </a>
+
             </li>
             <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog4.jpg" data-details-title ="30">
+                <a class="thumbnails-anchor" href="images/dog4.jpg" data-details-title="The most serious dog" >
                     <img class="thumbnails-image" src="images/dog4.jpg" alt="dog4 image">
-                    <span class="thumbnails-title">dog4</span>
+                    <span class="thumbnails-title">Speaker</span>
                 </a>
+
             </li>
             <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog5.jpg" data-details-title ="31">
+                <a class="thumbnails-anchor" href="images/dog5.jpg" data-details-title="The most beautiful dog">
                     <img class="thumbnails-image" src="images/dog5.jpg" alt="dog5 image">
-                    <span class="thumbnails-title">dog5</span>
+                    <span class="thumbnails-title">Dolly</span>
                 </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog1.jpg" data-details-title ="32">
-                    <img class="thumbnails-image" src="images/dog1.jpg" alt="dog1 image">
-                    <span class="thumbnails-title">dog1</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog2.jpg" data-details-title ="33">
-                    <img class="thumbnails-image" src="images/dog2.jpg" alt="dog2 image">
-                    <span class="thumbnails-title">dog2</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog3.jpg" data-details-title ="34">
-                    <img class="thumbnails-image" src="images/dog3.jpg" alt="dog3 image">
-                    <span class="thumbnails-title">dog3</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog4.jpg" data-details-title ="35">
-                    <img class="thumbnails-image" src="images/dog4.jpg" alt="dog4 image">
-                    <span class="thumbnails-title">dog4</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog5.jpg" data-details-title ="36">
-                    <img class="thumbnails-image" src="images/dog5.jpg" alt="dog5 image">
-                    <span class="thumbnails-title">dog5</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog1.jpg" data-details-title ="13">
-                    <img class="thumbnails-image" src="images/dog1.jpg" alt="dog1 image">
-                    <span class="thumbnails-title">dog1</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog2.jpg" data-details-title ="13">
-                    <img class="thumbnails-image" src="images/dog2.jpg" alt="dog2 image">
-                    <span class="thumbnails-title">dog2</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog3.jpg" data-details-title ="13">
-                    <img class="thumbnails-image" src="images/dog3.jpg" alt="dog3 image">
-                    <span class="thumbnails-title">dog3</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog4.jpg" data-details-title ="13">
-                    <img class="thumbnails-image" src="images/dog4.jpg" alt="dog4 image">
-                    <span class="thumbnails-title">dog4</span>
-                </a>
-            </li>
-            <li class="thumbnails-item">
-                <a  class="thambnails-anchor" href="images/dog5.jpg" data-details-title ="13">
-                    <img class="thumbnails-image" src="images/dog5.jpg" alt="dog5 image">
-                    <span class="thumbnails-title">dog5</span>
-                </a>
+
             </li>
             
 
         </ul>
+
     </main>
     <footer class="footer-title">
-        &copy;copyritght 2021
-        <a href="http://tel-ran.com">
-            tel-ran
-        </a>
+        &copy; Copyright 2021
+        <a href="http://tel-ran.com">Tel-Ran</a>
     </footer>
-    
-    <script src="src/index.js">
-    </script>
-
+   <script src="src/index.js"></script>
 </body>
+
 </html>
