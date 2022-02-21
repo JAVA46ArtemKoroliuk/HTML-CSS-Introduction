@@ -1,5 +1,10 @@
  const path = require('path');
-module.exports = {
+
+ function __dirname() {
+
+ }
+
+ module.exports = {
   mode: 'development',
   entry: '.src/main.js',
   watch: true,

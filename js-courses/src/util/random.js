@@ -5,5 +5,5 @@ function getRandomElement(array){
 
 }
 function  getRandomDate(minYear, maxYear){
-    return()
+    return
 }
