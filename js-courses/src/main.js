@@ -1,7 +1,6 @@
 import courseData from './config/courseData.json'
-import { getRandomDate, getRandomNumber } from './utils/random';
 import { getRandomCourse } from './utils/randomCourse';
-const N_COURSES = 100;
+const N_COURSES = 10;
 function createCourses() {
     const courses = [];
     for (let i = 0; i < N_COURSES; i++) {
